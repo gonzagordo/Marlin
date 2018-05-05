@@ -333,6 +333,10 @@
       #endif
 
     #else
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++CONFIGURACION LCD PINS +++++++++++++++++++++++++++++
+
 
       #if ENABLED(MKS_12864OLED) || ENABLED(MKS_12864OLED_SSD1306)
         #define LCD_PINS_DC     25 // Set as output on init
@@ -357,6 +361,9 @@
       #endif
 
     #endif
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++CONFIGURACION LCD PINS +++++++++++++++++++++++++++++
 
     #if DISABLED(NEWPANEL)
       // Buttons are attached to a shift register
@@ -375,20 +382,28 @@
   #if ENABLED(NEWPANEL)
 
     #if ENABLED(REPRAP_DISCOUNT_SMART_CONTROLLER)
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++CONFIGURACION LCD PINS +++++++++++++++++++++++++++++
 
-      #define BEEPER_PIN        37
+
+      #define BEEPER_PIN        37  // CORRECTO DE SERIE
 
       #if ENABLED(CR10_STOCKDISPLAY)
         #define BTN_EN1         17
         #define BTN_EN2         23
       #else
-        #define BTN_EN1         31
-        #define BTN_EN2         33
+        #define BTN_EN1         29 // CAMBIADO ANTES 31
+        #define BTN_EN2         25 // CAMBIADO ANTES 33
       #endif
 
       #define BTN_ENC           35
-      #define SD_DETECT_PIN     49
+      #define SD_DETECT_PIN     27  // CAMBIADO ANTES 49
       #define KILL_PIN          41
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++CONFIGURACION LCD PINS +++++++++++++++++++++++++++++
+
 
       #if ENABLED(BQ_LCD_SMART_CONTROLLER)
         #define LCD_BACKLIGHT_PIN 39
